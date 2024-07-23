@@ -1,3 +1,3 @@
 export function App() {
-  return <div>Inicio</div>;
+  return <h1 className="text-3xl font-bold underline">Inicio</h1>;
 }
