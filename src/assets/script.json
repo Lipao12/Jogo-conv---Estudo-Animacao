@@ -1,0 +1,79 @@
+{
+    "scenes": {
+      "start": {
+        "text": "Após a misteriosa desaparição de sua amada, Luna, você decide deixar seu planeta natal em uma missão desesperada para encontrá-la. Seu coração está cheio de determinação enquanto você se despede de sua família e amigos.",
+        "options": {
+          "partir": {
+            "text": "Partir em sua nave espacial.",
+            "nextScene": "space_travel"
+          }
+        }
+      },
+      "space_travel": {
+        "text": "Sua nave espacial desliza pelo vazio do cosmos. As estrelas passam rapidamente, e você sente a vastidão do universo. De repente, seus sensores captam um sinal vindo de um planeta desconhecido coberto de pântanos.",
+        "options": {
+          "investigar": {
+            "text": "Investigar o sinal.",
+            "nextScene": "landing_swamp_planet"
+          },
+          "ignorar": {
+            "text": "Ignorar e continuar a busca.",
+            "nextScene": "continue_search"
+          }
+        }
+      },
+      "landing_swamp_planet": {
+        "text": "Você decide investigar o sinal e pousa sua nave em um planeta pantanoso. A névoa verde envolve a área, e o som de criaturas desconhecidas ecoa ao redor. O ar é pesado e úmido, e você sente um arrepio na espinha.",
+        "options": {
+          "explorar": {
+            "text": "Explorar o ambiente.",
+            "nextScene": "exploring_swamp"
+          },
+          "voltar_nave": {
+            "text": "Voltar para a nave.",
+            "nextScene": "space_travel"
+          }
+        }
+      },
+      "exploring_swamp": {
+        "text": "Você começa a explorar o pântano, cuidadosamente evitando as poças de lama e as raízes traiçoeiras. Ao longe, você vê uma figura misteriosa se movendo entre as árvores.",
+        "options": {
+          "seguir_figura": {
+            "text": "Seguir a figura.",
+            "nextScene": "following_figure"
+          },
+          "ignorar_figura": {
+            "text": "Ignorar a figura e continuar explorando.",
+            "nextScene": "continue_exploring"
+          }
+        }
+      },
+      "following_figure": {
+        "text": "Você decide seguir a figura. Conforme se aproxima, percebe que é uma criatura alienígena com olhos brilhantes e pele escamosa. Ela parece estar protegendo algo.",
+        "options": {
+          "abordar_creatura": {
+            "text": "Abordar a criatura pacificamente.",
+            "nextScene": "peaceful_approach"
+          },
+          "atacar_creatura": {
+            "text": "Atacar a criatura.",
+            "nextScene": "attack_creature"
+          }
+        }
+      },
+      "peaceful_approach": {
+        "text": "Você se aproxima lentamente e fala em um tom calmo. A criatura alienígena olha para você com curiosidade e parece entender suas intenções. Ela aponta para uma caverna escondida nas sombras.",
+        "options": {
+          "entrar_caverna": {
+            "text": "Entrar na caverna.",
+            "nextScene": "entering_cave"
+          },
+          "voltar_atrás": {
+            "text": "Voltar atrás.",
+            "nextScene": "exploring_swamp"
+          }
+        }
+      }
+    }
+  }
+  
