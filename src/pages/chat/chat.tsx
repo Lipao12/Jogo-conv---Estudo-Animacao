@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { initialState } from "../../assets/initial-state";
 import script from "../../assets/script.json";
 import { Message } from "../../ui/components/message";
@@ -13,6 +13,15 @@ export const Chat = () => {
       text: initialState.messages[0].text,
     },
   ]);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const personSpeakOption = (option: string) => {
     console.log(script.scenes[currentScene].options[option].text);
@@ -40,17 +49,16 @@ export const Chat = () => {
     changeSceene(option);
   };
   return (
-    <div className="h-full w-full p-4">
+    <div className="h-full w-full p-4 flex flex-col justify-between">
       <div className="fixed top-4 right-4 z-20">
-        <StatusPlayer
-          life={initialState.player.health}
-          attack={initialState.player.attack}
-          defense={initialState.player.defense}
-        />
+        <StatusPlayer player={initialState.player} />
       </div>
-      {messages.map((msg, index) => (
-        <Message key={index} sender={msg.sender} text={msg.text} />
-      ))}
+      <div className="overflow-y-auto h-full mb-4">
+        {messages.map((msg, index) => (
+          <Message key={index} sender={msg.sender} text={msg.text} />
+        ))}
+        <div ref={messagesEndRef} />
+      </div>
       <Options
         options={script.scenes[currentScene].options}
         onSelect={handleOptionSelect}

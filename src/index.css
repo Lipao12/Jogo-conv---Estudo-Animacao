@@ -22,4 +22,44 @@
       opacity: 0.5; 
       pointer-events: none;
     }
+    .bg-gradient-to-r {
+      background: linear-gradient(to right, #6e2b91, #2a6f8f); /* Gradiente roxo-azul */
+    }
+    .animate-spin-slow {
+      animation: spin-slow 20s linear infinite;
+      pointer-events: none;
+    }
+    
+    .animate-spin-reverse-slow {
+      animation: spin-reverse-slow 25s linear infinite;
+      pointer-events: none;
+    }
+  
+    .planet {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+    }
   }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin-reverse-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  
+
+  
