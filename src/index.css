@@ -40,6 +40,15 @@
       top: 0;
       transform: translateY(-50%);
     }
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .fade-in {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
   }
 
   @keyframes spin-slow {
